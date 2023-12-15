@@ -1,0 +1,108 @@
+name: ecommer_store
+description: A new Flutter project.
+
+
+publish_to: 'none' 
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+
+
+
+
+#........ PACKAGES .........#
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # UTILITY PACKAGES
+   
+  # ICONS 
+  
+  cupertino_icons: ^1.0.2
+  iconsax: ^0.0.8
+
+
+  # STATE MANAGEMENT 
+  get: ^4.6.5
+
+
+  # PRODUCT SPECIFIC
+
+
+#..//...... PACKAGES END ....//.....#
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  
+#....... LOCAL ASSETS ...........#
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/videos/
+  
+
+      
+  fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Light.ttf
+        weight: 300
+      - asset: assets/fonts/Poppins-Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Poppins-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/Poppins-SemiBold.ttf
+        weight: 600
+      - asset: assets/fonts/Poppins-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Poppins-Black.ttf
+        weight: 900
+      - asset: assets/fonts/Poppins-MediumItalic.ttf
+        weight: 500
+        style: italic
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
