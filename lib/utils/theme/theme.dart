@@ -4,6 +4,7 @@ import 'package:ecommer_store/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:ecommer_store/utils/theme/custom_themes/chip_theme.dart';
 import 'package:ecommer_store/utils/theme/custom_themes/elevator_button_theme.dart';
 import 'package:ecommer_store/utils/theme/custom_themes/outlined_button_theme.dart';
+import 'package:ecommer_store/utils/theme/custom_themes/text_field.dart';
 import 'package:ecommer_store/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,8 @@ class AppTheme {
     checkboxTheme: CustomCheckboxTheme.lightCheckboxTheme,
     chipTheme: CustomChipTheme.lightChipTheme,
     outlinedButtonTheme: CustomOutlinedTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: CustomTextFieldTheme
+        .lightTextFieldTheme, //input decoration is text field theme
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
@@ -37,5 +40,7 @@ class AppTheme {
     checkboxTheme: CustomCheckboxTheme.darkCheckboxTheme,
     chipTheme: CustomChipTheme.darkChipTheme,
     outlinedButtonTheme: CustomOutlinedTheme.darkOutlinedTheme,
+    inputDecorationTheme: CustomTextFieldTheme
+        .darkTextFieldTheme, //input decoration is text field theme
   );
 }
