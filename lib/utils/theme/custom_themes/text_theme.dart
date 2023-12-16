@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ATextTheme {
-  ATextTheme._();
+class CustomTextTheme {
+  CustomTextTheme._();
 
 // light theme
 

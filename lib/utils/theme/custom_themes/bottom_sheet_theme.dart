@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ABottomSheetTheme {
-  ABottomSheetTheme._();
+class CustomBottomSheetTheme {
+  CustomBottomSheetTheme._();
 
   // Bottom sheet light theme
 

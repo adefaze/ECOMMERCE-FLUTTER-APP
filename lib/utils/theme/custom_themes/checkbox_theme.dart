@@ -4,7 +4,7 @@ class CustomCheckboxTheme {
   CustomCheckboxTheme._();
 
 // light custom Checkbox theme
-  static CheckboxThemeData lightCheckboxCustomTheme = CheckboxThemeData(
+  static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
@@ -27,9 +27,8 @@ class CustomCheckboxTheme {
         },
       ));
 
-
-      // dark custom Checkbox theme
-  static CheckboxThemeData darkCheckboxCustomTheme = CheckboxThemeData(
+  // dark custom Checkbox theme
+  static CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
