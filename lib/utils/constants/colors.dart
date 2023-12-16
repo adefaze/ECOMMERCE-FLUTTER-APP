@@ -45,4 +45,17 @@ class AppColors {
   static const Color softGrey = Color(0xFFF4F4F4);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
+
+  // Gradients
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: [Color(0xFF4b68ff), Color(0xFFFFE24B)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  static const RadialGradient secondaryGradient = RadialGradient(
+    colors: [Color(0xFFb0c7ff), Color(0xFF4b68ff)],
+    radius: 0.8,
+    center: Alignment.topLeft,
+  );
 }
