@@ -3,6 +3,7 @@ import 'package:ecommer_store/utils/constants/image_strings.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'widgets/onboarding_cricle_button.dart';
 import 'widgets/onboarding_dot_navigation.dart';
@@ -16,6 +17,7 @@ class OnboardingScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     return Scaffold(
       body: Stack(
         children: [
