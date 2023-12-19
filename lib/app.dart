@@ -1,5 +1,7 @@
+import 'package:ecommer_store/features/authentication/screens/onboarding/onboarding_view.dart';
 import 'package:ecommer_store/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 import 'utils/theme/theme.dart';
 
@@ -8,11 +10,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
+      home: const OnboardingScreens(),
     );
   }
 }
