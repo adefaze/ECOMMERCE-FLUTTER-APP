@@ -1,5 +1,5 @@
-class AppSizes {
-  AppSizes._();
+class TAppSizes {
+  TAppSizes._();
 
   // Padding and margin sizes
   static const double xs = 4.0;

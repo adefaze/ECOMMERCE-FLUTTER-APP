@@ -5,6 +5,7 @@ import 'package:ecommer_store/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../controllers/onboarding_controller.dart';
 import 'widgets/onboarding_cricle_button.dart';
 import 'widgets/onboarding_dot_navigation.dart';
 import 'widgets/onboarding_page.dart';
@@ -23,21 +24,23 @@ class OnboardingScreens extends StatelessWidget {
         children: [
           // horizontal scrollable pages
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updateIndicatorIndex,
             children: const [
               OnBoardingPage(
-                image: AppImages.onBoardingImage1,
-                title: AppTexts.onBoardingTitle1,
-                subTitle: AppTexts.onBoardingSubTitle1,
+                image: TAppImages.onBoardingImage1,
+                title: TAppTexts.onBoardingTitle1,
+                subTitle: TAppTexts.onBoardingSubTitle1,
               ),
               OnBoardingPage(
-                image: AppImages.onBoardingImage2,
-                title: AppTexts.onBoardingTitle2,
-                subTitle: AppTexts.onBoardingSubTitle2,
+                image: TAppImages.onBoardingImage2,
+                title: TAppTexts.onBoardingTitle2,
+                subTitle: TAppTexts.onBoardingSubTitle2,
               ),
               OnBoardingPage(
-                image: AppImages.onBoardingImage3,
-                title: AppTexts.onBoardingTitle3,
-                subTitle: AppTexts.onBoardingSubTitle3,
+                image: TAppImages.onBoardingImage3,
+                title: TAppTexts.onBoardingTitle3,
+                subTitle: TAppTexts.onBoardingSubTitle3,
               ),
             ],
           ),

@@ -20,7 +20,6 @@ class App extends StatelessWidget {
   }
 }
 
-
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -36,7 +35,7 @@ class SplashScreen extends StatelessWidget {
             : Colors.white, // Set background color based on mode
         child: Center(
           child: Image.asset(
-            isDarkMode ? AppImages.lightAppLogo : AppImages.darkAppLogo,
+            isDarkMode ? TAppImages.lightAppLogo : TAppImages.darkAppLogo,
             fit: BoxFit.cover,
           ), // Set image based on mode
         ),

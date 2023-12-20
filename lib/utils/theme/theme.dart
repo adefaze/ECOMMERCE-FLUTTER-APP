@@ -21,7 +21,7 @@ class AppTheme {
     elevatedButtonTheme: CustomElevatorButtonTheme.lightElevatorButtonTheme,
     appBarTheme: CustomAppBarTheme.lightAppbarTheme,
     bottomSheetTheme: CustomBottomSheetTheme.lightThemeButtonSheet,
-    checkboxTheme: CustomCheckboxTheme.lightCheckboxTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     chipTheme: CustomChipTheme.lightChipTheme,
     outlinedButtonTheme: CustomOutlinedTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: CustomTextFieldTheme
@@ -37,7 +37,7 @@ class AppTheme {
     elevatedButtonTheme: CustomElevatorButtonTheme.darkElevatorButtonTheme,
     appBarTheme: CustomAppBarTheme.darkAppbarTheme,
     bottomSheetTheme: CustomBottomSheetTheme.darkThemeButtonSheet,
-    checkboxTheme: CustomCheckboxTheme.darkCheckboxTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
     chipTheme: CustomChipTheme.darkChipTheme,
     outlinedButtonTheme: CustomOutlinedTheme.darkOutlinedTheme,
     inputDecorationTheme: CustomTextFieldTheme

@@ -1,3 +1,4 @@
+import 'package:ecommer_store/features/authentication/controllers/onboarding_controller.dart';
 import 'package:ecommer_store/utils/constants/colors.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/device/device_utility.dart';
@@ -12,16 +13,18 @@ class OnBoardingDotNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnBoardingController.instance;
     final isDark = THelperFunctions.isDarkMode(context);
 
     return Positioned(
-        left: AppSizes.defaultSpace,
+        left: TAppSizes.defaultSpace,
         bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
         child: SmoothPageIndicator(
-          controller: PageController(),
+          controller: controller.pageController,
+          onDotClicked: controller.dotNavigationClick,
           count: 3,
           effect: ExpandingDotsEffect(
-              activeDotColor: isDark ? AppColors.white : AppColors.dark,
+              activeDotColor: isDark ? TAppColors.white : TAppColors.dark,
               dotHeight: 6),
         ));
   }

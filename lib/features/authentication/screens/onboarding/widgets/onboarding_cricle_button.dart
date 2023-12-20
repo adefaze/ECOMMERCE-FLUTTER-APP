@@ -1,3 +1,4 @@
+import 'package:ecommer_store/features/authentication/controllers/onboarding_controller.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +12,13 @@ class OnBoardingCirlcleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      right: AppSizes.defaultSpace,
+      right: TAppSizes.defaultSpace,
       bottom: TDeviceUtils.getBottomNavigationBarHeight(),
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(shape: const CircleBorder()),
-          onPressed: () {},
+          onPressed: () {
+            OnBoardingController.instance.nextPage();
+          },
           child: const Icon(Iconsax.arrow_right_3)),
     );
   }
