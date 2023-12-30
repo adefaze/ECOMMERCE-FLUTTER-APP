@@ -1,6 +1,8 @@
+import 'package:ecommer_store/features/authentication/screens/signup/signup.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LoginForm extends StatelessWidget {
@@ -12,8 +14,8 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            vertical: TAppSizes.spaceBtwSections),
+        padding:
+            const EdgeInsets.symmetric(vertical: TAppSizes.spaceBtwSections),
         child: Column(
           children: [
             // email
@@ -55,15 +57,16 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(TAppTexts.signIn)),
+                  onPressed: () {}, child: const Text(TAppTexts.signIn)),
             ),
             const SizedBox(height: TAppSizes.spaceBtwItems),
             // create account
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const SignupScreen());
+                  },
                   child: const Text(TAppTexts.createAccount)),
             )
           ],

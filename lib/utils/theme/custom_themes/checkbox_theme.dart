@@ -1,3 +1,4 @@
+import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class TCheckboxTheme {
@@ -6,7 +7,7 @@ class TCheckboxTheme {
 // light custom Checkbox theme
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(TAppSizes.xs),
       ),
       checkColor: MaterialStateProperty.resolveWith(
         (states) {
@@ -30,7 +31,7 @@ class TCheckboxTheme {
   // dark custom Checkbox theme
   static CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(TAppSizes.xs),
       ),
       checkColor: MaterialStateProperty.resolveWith(
         (states) {

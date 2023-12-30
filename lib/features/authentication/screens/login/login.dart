@@ -4,13 +4,9 @@ import 'package:ecommer_store/features/authentication/screens/login/widgets/logi
 import 'package:ecommer_store/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
 import 'package:ecommer_store/utils/helpers/helper_functions.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../common/styles/spacing_styles.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class LoginScreen extends StatelessWidget {
