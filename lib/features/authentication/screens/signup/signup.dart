@@ -1,22 +1,23 @@
-import 'package:ecommer_store/utils/constants/colors.dart';
+import 'package:ecommer_store/common/widgets/form_divider.dart';
+import 'package:ecommer_store/common/widgets/social_icons.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
-import 'package:ecommer_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
+import 'signup_widgets.dart/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TAppSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // title
               Text(
@@ -27,119 +28,16 @@ class SignupScreen extends StatelessWidget {
               const SizedBox(height: TAppSizes.spaceBtwSections),
 
               // form
-              Form(
-                  child: Column(
-                children: [
-                  Row(
-                    children: [
-                      // first and last name
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: const InputDecoration(
-                              labelText: TAppTexts.firstName,
-                              prefixIcon: Icon(Iconsax.user)),
-                        ),
-                      ),
-                      const SizedBox(width: TAppSizes.spaceBtwInputFields),
-                      Expanded(
-                        child: TextFormField(
-                          expands: false,
-                          decoration: const InputDecoration(
-                              labelText: TAppTexts.lastName,
-                              prefixIcon: Icon(Iconsax.user)),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: TAppSizes.spaceBtwInputFields),
+              const SignupForm(),
+              const SizedBox(height: TAppSizes.spaceBtwSections),
 
-                  // username
-                  TextFormField(
-                    expands: false,
-                    decoration: const InputDecoration(
-                        labelText: TAppTexts.username,
-                        prefixIcon: Icon(Iconsax.user_edit)),
-                  ),
+              // divider
+              FormDivider(dividerText: TAppTexts.orSignUpWith.capitalize!),
 
-                  const SizedBox(height: TAppSizes.spaceBtwInputFields),
+              const SizedBox(height: TAppSizes.spaceBtwItems),
 
-                  // email
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        labelText: TAppTexts.email,
-                        prefixIcon: Icon(Iconsax.direct)),
-                  ),
-                  const SizedBox(height: TAppSizes.spaceBtwInputFields),
-
-                  // phone number
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        labelText: TAppTexts.phoneNo,
-                        prefixIcon: Icon(Iconsax.call)),
-                  ),
-                  const SizedBox(height: TAppSizes.spaceBtwInputFields),
-
-                  // password
-                  TextFormField(
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                      labelText: TAppTexts.password,
-                      prefixIcon: Icon(Iconsax.password_check),
-                      suffixIcon: Icon(Iconsax.eye_slash),
-                    ),
-                  ),
-                  const SizedBox(height: TAppSizes.spaceBtwInputFields),
-
-                  // Terms and condition checkbox
-                  Row(
-                    children: [
-                      SizedBox(
-                        height: 24,
-                        width: 24,
-                        child: Checkbox(value: true, onChanged: (value) {}),
-                      ),
-                      const SizedBox(width: TAppSizes.spaceBtwItems),
-                      Flexible(
-                        child: Text.rich(TextSpan(children: [
-                          TextSpan(
-                              text: '${TAppTexts.iAgreeTo} ',
-                              style: Theme.of(context).textTheme.bodySmall),
-                          TextSpan(
-                            text: '${TAppTexts.privacyPolicy} ',
-                            style:
-                                Theme.of(context).textTheme.bodyMedium!.apply(
-                                      color: dark
-                                          ? TAppColors.white
-                                          : TAppColors.primary,
-                                      decoration: TextDecoration.underline,
-                                      decorationColor: dark
-                                          ? TAppColors.white
-                                          : TAppColors.primary,
-                                    ),
-                          ),
-                          TextSpan(
-                              text: '${TAppTexts.and} ',
-                              style: Theme.of(context).textTheme.bodySmall),
-                          TextSpan(
-                            text: '${TAppTexts.termsOfUse} ',
-                            style:
-                                Theme.of(context).textTheme.bodyMedium!.apply(
-                                      color: dark
-                                          ? TAppColors.white
-                                          : TAppColors.primary,
-                                      decoration: TextDecoration.underline,
-                                      decorationColor: dark
-                                          ? TAppColors.white
-                                          : TAppColors.primary,
-                                    ),
-                          ),
-                        ])),
-                      )
-                    ],
-                  ),
-                ],
-              )),
+              // footer
+              const SocialIcons(),
             ],
           ),
         ),

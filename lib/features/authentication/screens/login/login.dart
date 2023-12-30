@@ -3,7 +3,6 @@ import 'package:ecommer_store/common/widgets/social_icons.dart';
 import 'package:ecommer_store/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:ecommer_store/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
-import 'package:ecommer_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../common/styles/spacing_styles.dart';
@@ -14,7 +13,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -22,7 +20,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               // Header
-              LoginHeader(dark: dark),
+              const LoginHeader(),
               // const SizedBox(height: TAppSizes.spaceBtwSections),
               // Form
               const LoginForm(),
