@@ -1,6 +1,7 @@
 import 'package:ecommer_store/features/authentication/screens/login/login.dart';
 import 'package:ecommer_store/utils/constants/image_strings.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
+import 'package:ecommer_store/utils/constants/text_strings.dart';
 import 'package:ecommer_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,9 +32,36 @@ class VerifyEmailScreen extends StatelessWidget {
                 image: const AssetImage(TAppImages.deliveredEmailIllustration),
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
+              const SizedBox(height: TAppSizes.spaceBtwSections),
+
               // title and subtitle
+              Text(
+                TAppTexts.confirmEmail,
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TAppSizes.spaceBtwItems),
+              Text(
+                "adefaze@gmail.com",
+                style: Theme.of(context).textTheme.labelLarge,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TAppSizes.spaceBtwItems),
+
+              Text(
+                TAppTexts.confirmEmailSubTitle,
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TAppSizes.spaceBtwSections),
 
               // buttons
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(TAppTexts.confirmEmail)),
+              )
             ],
           ),
         ),

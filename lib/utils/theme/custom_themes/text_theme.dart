@@ -49,7 +49,7 @@ class CustomTextTheme {
     headlineMedium: const TextStyle().copyWith(
         fontSize: 24.0, fontWeight: FontWeight.w600, color: Colors.white),
     headlineSmall: const TextStyle().copyWith(
-        fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.black),
+        fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white),
     // title
     titleLarge: const TextStyle().copyWith(
         fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white),
