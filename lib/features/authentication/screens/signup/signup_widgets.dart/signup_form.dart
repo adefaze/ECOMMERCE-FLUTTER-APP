@@ -1,6 +1,8 @@
+import 'package:ecommer_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'terms_and_conditions.dart';
@@ -82,7 +84,8 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(TAppTexts.createAccount)),
+                onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                child: const Text(TAppTexts.createAccount)),
           ),
         ],
       ),
