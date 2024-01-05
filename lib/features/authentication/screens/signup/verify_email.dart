@@ -60,14 +60,19 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(SuccessScreen(
+                          image: TAppImages.staticSuccessIllustration,
+                          title: TAppTexts.yourAccountCreatedTitle,
+                          subtitle: TAppTexts.yourAccountCreatedSubTitle,
+                          onPressed: () => Get.to(const LoginScreen()),
+                        )),
                     child: const Text(TAppTexts.confirmEmail)),
               ),
               const SizedBox(height: TAppSizes.spaceBtwItems),
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () => Get.to(const SuccessScreen()),
+                    onPressed: () {},
                     child: Text(TAppTexts.resendEmail,
                         style: Theme.of(context).textTheme.bodyMedium)),
               )
