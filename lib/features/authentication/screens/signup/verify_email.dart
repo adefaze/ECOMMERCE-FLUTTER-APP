@@ -1,3 +1,4 @@
+import 'package:ecommer_store/common/widgets/success_screen/success_screen.dart';
 import 'package:ecommer_store/features/authentication/screens/login/login.dart';
 import 'package:ecommer_store/utils/constants/image_strings.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
@@ -66,7 +67,7 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(const SuccessScreen()),
                     child: Text(TAppTexts.resendEmail,
                         style: Theme.of(context).textTheme.bodyMedium)),
               )
