@@ -1,3 +1,4 @@
+import 'package:ecommer_store/features/authentication/screens/passpord_configurations/forgot_password.dart';
 import 'package:ecommer_store/features/authentication/screens/signup/signup.dart';
 import 'package:ecommer_store/utils/constants/sizes.dart';
 import 'package:ecommer_store/utils/constants/text_strings.dart';
@@ -48,7 +49,7 @@ class LoginForm extends StatelessWidget {
                 ),
                 // Password
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgotPasswordScreen()),
                     child: const Text(TAppTexts.forgetPassword))
               ],
             ),
