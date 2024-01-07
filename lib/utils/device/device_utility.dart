@@ -18,12 +18,12 @@ class TDeviceUtils {
   }
 
   static bool isLandscapeOrientation(BuildContext context) {
-    final viewInsets = WidgetsBinding.instance.window.viewInsets;
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom == 0;
   }
 
   static bool isPortraitOrientation(BuildContext context) {
-    final viewInsets = WidgetsBinding.instance.window.viewInsets;
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom != 0;
   }
 
@@ -61,8 +61,8 @@ class TDeviceUtils {
     return viewInsets.bottom;
   }
 
-  static Future<bool> isKeyboardVisible() async {
-    final viewInsets = WidgetsBinding.instance.window.viewInsets;
+  static Future<bool> isKeyboardVisible(BuildContext context) async {
+    final viewInsets = View.of(context).viewInsets;
     return viewInsets.bottom > 0;
   }
 
