@@ -1,3 +1,6 @@
+import 'package:ecommer_store/features/shop/screens/home/home.dart';
+import 'package:ecommer_store/utils/constants/colors.dart';
+import 'package:ecommer_store/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -8,6 +11,7 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
+    final darkMode = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       bottomNavigationBar: Obx(
@@ -17,6 +21,10 @@ class NavigationMenu extends StatelessWidget {
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
+          backgroundColor: darkMode ? TAppColors.black : TAppColors.white,
+          indicatorColor: darkMode
+              ? TAppColors.white.withOpacity(0.1)
+              : TAppColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
@@ -36,7 +44,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    Container(color: Colors.green),
+    const HomeScreen(),
     Container(color: Colors.blue),
     Container(color: Colors.yellow),
     Container(color: Colors.red),
