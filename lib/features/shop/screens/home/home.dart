@@ -1,6 +1,8 @@
-import 'package:ecommer_store/common/widgets/custom_shapes/container/circle_container.dart';
-import 'package:ecommer_store/common/widgets/custom_shapes/custom_edges/curved_edges.dart';
+import 'package:ecommer_store/common/widgets/appbar/appbar.dart';
+import 'package:ecommer_store/common/widgets/custom_shapes/container/primary_header_container_widget.dart';
 import 'package:ecommer_store/utils/constants/colors.dart';
+import 'package:ecommer_store/utils/constants/text_strings.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,32 +14,22 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ClipPath(
-              clipper: TCustomCurvedEdges(),
-              child: Container(
-                color: TAppColors.primary,
-                padding: const EdgeInsets.all(0),
-                child: SizedBox(
-                  height: 400,
-                  child: Stack(
+            TPrimaryHeaderCointainer(
+              child: Column(
+                children: [
+                  TAppbar(
+                      title: Column(
                     children: [
-                      Positioned(
-                        top: -150,
-                        right: -250,
-                        child: TCirlcularContainer(
-                            backgroundColor:
-                                TAppColors.textWhite.withOpacity(0.1)),
-                      ),
-                      Positioned(
-                        top: 100,
-                        right: -300,
-                        child: TCirlcularContainer(
-                            backgroundColor:
-                                TAppColors.textWhite.withOpacity(0.1)),
+                      Text(
+                        TAppTexts.homeAppbarTitle,
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelMedium!
+                            .apply(color: TAppColors.grey),
                       ),
                     ],
-                  ),
-                ),
+                  )),
+                ],
               ),
             ),
           ],
